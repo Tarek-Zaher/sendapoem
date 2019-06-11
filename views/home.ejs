@@ -1,0 +1,42 @@
+<%- include("partials/header") -%>
+
+<nav>
+  <a href="#">sendapoem</a>
+  <a href="#">home</a>
+  <a href="#">about</a>
+</nav>
+
+<header>
+  <h1>Send a Custom Poem to Someone You Care About.</h1>
+  <p>Need something to write in a card?  Feel bad about something you did? Just want to make someone’s day? Fill out the form below (less than a minute) and generate a custom poem for free!  </p>
+  <img src="images/poem.svg" alt="Icon of a Poem on a piece of paper signed with a heart.">
+</header>
+
+<section>
+  <form action="/" method="post">
+
+    <select name="person">
+    <option value="" disabled selected>Your Relationship to the Recipient</option>
+    <option value="mother">Mother</option>
+    <option value="father">Father</option>
+    <option value="sibling">Sibling</option>
+    <option value="friend">Friend</option>
+    </select>
+
+    <select name="mood">
+    <option value="" disabled selected>Mood of Poem</option>
+    <option value="general-thanks">General Thanks</option>
+    <option value="birthday">Birthday</option>
+    <option value="romantic">Romantic</option>
+    <option value="anger">Anger</option>
+    </select>
+
+    <input type="text" name="your-name" placeholder="Your Name">
+    <input type="text" name="their-name" placeholder="What you'd like them referred to as (e.g. Mom, Pops, etc.)">
+
+    <button type="submit" name="button">Generate!</button>
+
+  </form>
+</section>
+
+<%- include("partials/header") -%>
