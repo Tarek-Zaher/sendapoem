@@ -1,5 +1,302 @@
-body, html {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif; }
+:root {
+  --mainColor: #EF5350;
+  --accentColor: #3D3D3D;
+}
 
-/*# sourceMappingURL=styles.css.map */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+hr {
+  width: calc(100% - 2.4em);
+}
+
+.center {
+  text-align: center;
+}
+
+.large-h1 {
+  font-size: 3rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 400;
+  background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+}
+
+nav a:hover {
+  cursor: pointer;
+}
+
+nav a:visited {
+  color: black;
+}
+
+.container {
+  text-align: center;
+  padding: .8em 1.2em;
+}
+
+.smaller-content {
+  width: 90%;
+  margin: 3em auto 1em auto;
+}
+
+nav ul li {
+  display: inline;
+  padding: 0 1em;
+}
+
+a.logo {
+  color: #EF5350;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a.logo:hover {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poem-icon {
+  width: 70%;
+  margin: 3em auto;
+}
+
+.subhead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6em;
+  color: #353535;
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+}
+
+.select-style {
+    border: none;
+    width: 100%;
+    margin: 1em auto 2em auto;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("../images/dropdown.svg") no-repeat 95% 50%;
+    background-color: var(--accentColor);
+    box-shadow: 0 2px 5px #101010;
+}
+
+.select-style select {
+    padding: 1em 1.1em;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+input {
+  border: none;
+  width: calc(100% - 2.2em);
+  padding: 1em 1.1em;
+  margin: 0 auto 3em auto;
+  border-radius: 3px;
+  display: block;
+  background: linear-gradient(
+    to bottom, var(--accentColor) 0%,
+    #4F4F4F 100%
+  );
+  box-shadow: inset 0 0 5px -3px black;
+  color: white;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+input::placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 1em 1.1em;
+  margin: 1em auto 1em auto;
+  font-size: 1em;
+  color: white;
+  background-color: var(--accentColor);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 5px 0 black;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+form button:focus {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.poem-card {
+  width: 80%;
+  margin: 3em auto;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px grey;
+  text-align: center;
+}
+
+.poem-card button {
+  width: 50%;
+  padding: 1em 1.1em;
+  margin: 1em auto 3em auto;
+  font-size: 1em;
+  color: white;
+  background-color: var(--accentColor);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 5px 0 black;
+  cursor: pointer;
+}
+.poem-card button:focus {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+textarea {
+  width: calc(100% - 4em);
+  height: auto;
+  border: none;
+  border-radius: 50px;
+  resize: none;
+}
+
+.poem {
+  font-family: 'Kalam', cursive;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2em;
+  padding: 2em;
+  color: #353535;
+}
+
+.copied {
+  text-align: center;
+}
+
+
+
+@media only screen and (min-width: 650px) {
+  body {
+    font-size: 20px;
+  }
+
+  hr {
+    width: 80%;
+  }
+
+  .large-h1 {
+    font-size: 5rem;
+  }
+
+  .smaller-content {
+    width: 40%;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    font-weight: 400;
+    background:
+       linear-gradient(
+         to bottom, var(--mainColor) 0%,
+         var(--mainColor) 100%
+       );
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: 2px 2px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .5s;
+  }
+
+  nav a:hover {
+    background-size: 4px 50px;
+  }
+
+  nav ul li {
+    display: inline;
+    padding: 0 2em;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5em 0;
+  }
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 2em;
+  }
+  section.hero div {
+    text-align: left;
+  }
+  .poem-icon {
+    width: 50%;
+  }
+
+  form {
+    width: 50%;
+  }
+
+  input {
+    width: calc(100% - 3.8em);
+    padding: 1.8em 1.9em;
+  }
+
+  .select-style select {
+    padding: 1.7em 1.8em;
+  }
+
+  .poem-card {
+    width: 40%;
+  }
+
+  .poem {
+    font-size: 1.8rem;
+  }
+}

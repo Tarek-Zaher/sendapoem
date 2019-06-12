@@ -1,42 +1,55 @@
 <%- include("partials/header") -%>
 
-<nav>
-  <a href="#">sendapoem</a>
-  <a href="#">home</a>
-  <a href="#">about</a>
-</nav>
+<div class="container">
 
-<header>
-  <h1>Send a Custom Poem to Someone You Care About.</h1>
-  <p>Need something to write in a card?  Feel bad about something you did? Just want to make someone’s day? Fill out the form below (less than a minute) and generate a custom poem for free!  </p>
-  <img src="images/poem.svg" alt="Icon of a Poem on a piece of paper signed with a heart.">
-</header>
+  <header>
+    <a href="/" class="logo">sendapoem</a>
 
-<section>
-  <form action="/" method="post">
+    <nav>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="#">about</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <select name="person">
-    <option value="" disabled selected>Your Relationship to the Recipient</option>
-    <option value="mother">Mother</option>
-    <option value="father">Father</option>
-    <option value="sibling">Sibling</option>
-    <option value="friend">Friend</option>
-    </select>
+  <section class="hero">
+    <img src="images/poem.svg" class="poem-icon" alt="Poem on a piece of paper signed with a heart.">
+    <div>
+      <h1>Send a Custom Poem to Someone You Care About.</h1>
+      <p class="subhead">Need something heartwarming to write in a card? Just want to make somebody's day? Fill out the form below and generate a custom poem for free. 🙂 </p>
+    </div>
+  </section>
+</div>
 
-    <select name="mood">
-    <option value="" disabled selected>Mood of Poem</option>
-    <option value="general-thanks">General Thanks</option>
-    <option value="birthday">Birthday</option>
-    <option value="romantic">Romantic</option>
-    <option value="anger">Anger</option>
-    </select>
+  <div class="container">
+    <form action="/" method="post">
 
-    <input type="text" name="your-name" placeholder="Your Name">
-    <input type="text" name="their-name" placeholder="What you'd like them referred to as (e.g. Mom, Pops, etc.)">
+      <div class="select-style">
+        <select name="person">
+        <option value="" disabled selected>Person</option>
+        <option value="mother">Mother</option>
+        <option value="father">Father</option>
+        <option value="significant-other">Significant Other</option>
+        <option value="friend">Friend</option>
+        </select>
+      </div>
 
-    <button type="submit" name="button">Generate!</button>
+      <div class="select-style">
+        <select name="mood">
+        <option value="" disabled selected>Mood</option>
+        <option value="general-thanks">General Thanks</option>
+        <option value="birthday">Birthday</option>
+        <option value="romantic">Romantic</option>
+        <option value="anger">Anger</option>
+        </select>
+      </div>
 
-  </form>
-</section>
+      <input type="text" name="name" placeholder="Your Name" autocomplete="off">
+
+      <button type="submit" name="button">Generate!</button>
+
+    </form>
+  </div>
 
 <%- include("partials/header") -%>
