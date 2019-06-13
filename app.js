@@ -93,7 +93,7 @@ app.post("/submit", (req, res) => {
     from: name + ' &lt;' + email + '&gt;',
     to: process.env.GMAIL_USER,
     subject: 'Poem Submission for sendapoem.org',
-    html: `<p>${name} (${email}) submitted the following poem:</p> <p>${person}</p> <p>${mood}</p> <p>${poem}</p>`
+    html: `<p>${name} (${email}) submitted the following poem:</p> <p>Person: ${person}</p> <p>Mood: ${mood}</p> <p>Poem: ${poem}</p>`
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
