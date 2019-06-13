@@ -1,0 +1,41 @@
+<%- include("partials/header") -%>
+
+<div class="container">
+
+  <header>
+    <a href="/" class="logo">sendapoem</a>
+
+    <nav>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/submit">submit</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="smaller-content">
+      <h1 class="center" style="margin-bottom: 0;">Submit Your Own Poem!</h1>
+      <p class="subhead center">designate who the poem is directed towards (e.g. father, brother, etc.) and its mood (e.g. sorrow, congratulations, etc.) using the form below.</p>
+    </div>
+  </section>
+</div>
+
+<hr>
+
+<div class="container">
+  <form action="/submit" method="post">
+
+    <input type="text" name="name" placeholder="Your Name" aria-label="Your Name">
+    <input type="text" name="email" placeholder="Your Email" aria-label="Your Email">
+    <input type="text" name="person" placeholder="Person" aria-label="Person">
+    <input type="text" name="mood" placeholder="Mood" aria-label="Mood">
+    <textarea class="submit" name="poem" rows="8" cols="80" placeholder="Your Poem"></textarea>
+
+    <button type="submit" name="button">Submit!</button>
+
+  </form>
+
+</div>
+
+<%- include("partials/footer") -%>

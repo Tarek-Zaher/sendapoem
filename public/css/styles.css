@@ -205,6 +205,19 @@ textarea {
   resize: none;
 }
 
+textarea.submit {
+  width: calc(100% - 4em);
+  border: 2px solid var(--accentColor);
+  border-radius: 0;
+  resize: vertical;
+  font-family: 'Kalam', cursive;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2em;
+  padding: 2em;
+  color: #353535;
+}
+
 .poem {
   font-family: 'Kalam', cursive;
   font-size: 1.2rem;
@@ -275,6 +288,11 @@ textarea {
   section.hero div {
     text-align: left;
   }
+
+  .hero-text {
+    padding-right: 5%;
+  }
+
   .poem-icon {
     width: 50%;
   }

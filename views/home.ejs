@@ -8,14 +8,14 @@
     <nav>
       <ul>
         <li><a href="/">home</a></li>
-        <li><a href="#">about</a></li>
+        <li><a href="/submit">submit</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
     <img src="images/poem.svg" class="poem-icon" alt="Poem on a piece of paper signed with a heart.">
-    <div>
+    <div class="hero-text">
       <h1>Send a Custom Poem to Someone You Care About.</h1>
       <p class="subhead">Need something heartwarming to write in a card? Just want to make somebody's day? Fill out the form below and generate a custom poem for free. 🙂 </p>
     </div>
@@ -29,9 +29,7 @@
         <select name="person">
         <option value="" disabled selected>Person</option>
         <option value="mother">Mother</option>
-        <option value="father">Father</option>
         <option value="significant-other">Significant Other</option>
-        <option value="friend">Friend</option>
         </select>
       </div>
 
@@ -45,7 +43,7 @@
         </select>
       </div>
 
-      <input type="text" name="name" placeholder="Your Name" autocomplete="off">
+      <input type="text" name="name" placeholder="Your Name" autocomplete="off" arialabel="Your Name">
 
       <button type="submit" name="button">Generate!</button>
 
