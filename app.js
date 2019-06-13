@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const nodemailer = require('nodemailer');
+const favicon = require('serve-favicon');
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use(favicon(__dirname + "/public/images/favicon.ico"));
 
 const defaultPoem = "hello friend,&#10;thanks for coming to my site!&#10;you didn't fill out the form&#10;but that's alright&#10;&#10;I hope you'll go back&#10;and fill it out all the way&#10;and then send it to someone special&#10;and make someone special's day. (:&#10;&#10;";
 const motherGeneralThanks = "When I was a baby&#10;You made sure that I grew&#10;and now I think, maybe,&#10;I would like to thank you:&#10;&#10;Thanks! (:&#10;&#10;";
