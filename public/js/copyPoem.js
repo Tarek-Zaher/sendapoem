@@ -1,5 +1,13 @@
 function copyPoem() {
   var copyText = document.getElementById("poem");
+  range = document.createRange();
+  range.selectNodeContents(copyText);
+  var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(range);
+
+    copyText.setSelectionRange(0, 999999);
+
   copyText.select();
   document.execCommand("copy");
 
