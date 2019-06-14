@@ -3,12 +3,11 @@ function copyPoem() {
   range = document.createRange();
   range.selectNodeContents(copyText);
   var s = window.getSelection();
-    s.removeAllRanges();
-    s.addRange(range);
+  s.removeAllRanges();
+  s.addRange(range);
 
-    copyText.setSelectionRange(0, 999999);
+  copyText.setSelectionRange(0, 999999);
 
-  copyText.select();
   document.execCommand("copy");
 
   var alert = document.createElement("div");
