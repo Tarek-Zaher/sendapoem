@@ -23,7 +23,7 @@
 <hr>
 
   <div class="poem-card">
-    <textarea class="poem" id="poem" rows="<%- lines %>">
+    <textarea class="poem" id="poem" rows="<%- lines %>" contenteditable="true" readonly="false">
 <%- poem %>—From <%= name %> <3</textarea>
 <button onclick="copyPoem()">Copy Poem</button>
   </div>
