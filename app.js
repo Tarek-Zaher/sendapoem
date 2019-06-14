@@ -23,55 +23,65 @@ const soGeneralThanks = "Thank you for your hugs.&#10;Thank you for your kisses.
 const soBirthday = "Roses are red.&#10;Violets are blue.&#10;You're the love of my life.&#10;Happy Birthday to you. (:&#10;&#10;";
 const soRomantic = "I must be a bear&#10;for you look oh so yummy&#10;ferocious when attacked,&#10;but inside sweet as honey. (:&#10;&#10;";
 const soAnger = "You were a fool to betray me&#10;and now you will have to pay me&#10;five kisses a day, two snuggles at night&#10;and the next time we argue&#10;you'll admit that I'm right!&#10;&#10;";
+let name = "";
 
 app.get("/", (req, res) => {
   res.render("home");
+  name = "";
 });
 
 app.get("/submit", (req, res) => {
   res.render("submit");
 });
 
+app.get("/default", (req, res) => {
+  res.render("poem", {poem: defaultPoem, name: "Tarek", lines: 11});
+});
+
+app.get("/mothergeneral-thanks", (req, res) => {
+  res.render("poem", {poem: motherGeneralThanks, name: name, lines: 8});
+});
+
+app.get("/motherbirthday", (req, res) => {
+  res.render("poem", {poem: motherBirthday, name: name, lines: 9});
+});
+
+app.get("/motherromantic", (req, res) => {
+  res.render("poem", {poem: motherRomantic, name: name, lines: 6});
+});
+
+app.get("/motheranger", (req, res) => {
+  res.render("poem", {poem: motherAnger, name: name, lines: 11});
+});
+
+app.get("/significant-othergeneral-thanks", (req, res) => {
+  res.render("poem", {poem: soGeneralThanks, name: name, lines: 6});
+});
+
+app.get("/significant-otherbirthday", (req, res) => {
+  res.render("poem", {poem: soBirthday, name: name, lines: 6});
+});
+
+app.get("/significant-otherromantic", (req, res) => {
+  res.render("poem", {poem: soRomantic, name: name, lines: 6});
+});
+
+app.get("/significant-otheranger", (req, res) => {
+  res.render("poem", {poem: soAnger, name: name, lines: 8});
+});
+
 app.post("/", (req, res) => {
   const person = req.body.person;
   const mood = req.body.mood;
-  const name = req.body.name;
+  const submittedName = req.body.name;
 
-  switch (person) {
-    case "mother":
-      if (mood === "general-thanks") {
-        res.render("poem", {poem: motherGeneralThanks, name: name, lines: 8});
-      }
-      if (mood === "birthday") {
-        res.render("poem", {poem: motherBirthday, name: name, lines: 9});
-      }
-      if (mood === "romantic") {
-        res.render("poem", {poem: motherRomantic, name: name, lines: 6});
-      }
-      if (mood === "anger") {
-        res.render("poem", {poem: motherAnger, name: name, lines: 11});
-      }
-      break;
-    case "significant-other":
-      if (mood === "general-thanks") {
-        res.render("poem", {poem: soGeneralThanks, name: name, lines: 6});
-      }
-      if (mood === "birthday") {
-        res.render("poem", {poem: soBirthday, name: name, lines: 6});
-      }
-      if (mood === "romantic") {
-        res.render("poem", {poem: soRomantic, name: name, lines: 6});
-      }
-      if (mood === "anger") {
-        res.render("poem", {poem: soAnger, name: name, lines: 8});
-      }
-      break;
-    default:
-      res.render("poem", {poem: defaultPoem, name: "Tarek", lines: 11});
+  name = submittedName;
 
+  if (!person || !mood) {
+    res.redirect("/default");
+  } else {
+    res.redirect("/"+ person + mood);
   }
-
-  res.render("poem", {poem: motherGeneralThanks, name: name});
 });
 
 app.post("/submit", (req, res) => {
