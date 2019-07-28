@@ -248,6 +248,7 @@ footer {
   padding: 1.5em 0;
 }
 footer h6 {
+  font-family: 'Roboto', sans-serif;
   font-size: .85rem;
   line-height: 1.75;
 }
