@@ -32,6 +32,15 @@ hr {
   font-size: 3rem;
 }
 
+#header {
+  background-color: rgba(133, 174, 225,.5);
+;
+}
+
+#Form {
+
+}
+
 nav a {
   text-decoration: none;
   font-size: 1em;
@@ -103,6 +112,7 @@ header {
 form {
   width: 80%;
   margin: auto;
+  padding: 4em 0;
 }
 
 .select-style {
@@ -157,7 +167,7 @@ input::placeholder {
 form button {
   width: 100%;
   padding: 1em 1.1em;
-  margin: 1em auto 1em auto;
+  margin: 0 auto 1em auto;
   font-size: 1em;
   color: white;
   background-color: var(--accentColor);
@@ -232,7 +242,22 @@ textarea.submit {
   text-align: center;
 }
 
-
+footer {
+  background-color: rgba(133, 174, 225,.5);
+  text-align: center;
+  padding: 1.5em 0;
+}
+footer h6 {
+  font-size: .85rem;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px dotted black;
+}
+footer a:hover {
+  border-bottom: 2px solid black;
+}
 
 @media only screen and (min-width: 650px) {
   body {
