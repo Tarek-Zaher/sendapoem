@@ -23,6 +23,12 @@ const soGeneralThanks = "Thank you for your hugs.&#10;Thank you for your kisses.
 const soBirthday = "Roses are red.&#10;Violets are blue.&#10;You're the love of my life.&#10;Happy Birthday to you. (:&#10;&#10;";
 const soRomantic = "I must be a bear&#10;for you look oh so yummy&#10;ferocious when attacked,&#10;but inside sweet as honey. (:&#10;&#10;";
 const soAnger = "You were a fool to betray me&#10;and now you will have to pay me&#10;five kisses a day, two snuggles at night&#10;and the next time we argue&#10;you'll admit that I'm right!&#10;&#10;";
+const thanosDidNothingWrong = "roses are red,&#10;the space stone is blue.&#10;thanos did nothing wrong.&#10;he did what's best for you&#10;&#10;";
+const thanosSad = "reality stones are red&#10;i feel bad, man.&#10;I tried to help the universe,&#10;and they called me a mad man&#10;&#10;";
+const thanosImpatient = "Mind stones are yellow,&#10;My favorite chocolate is Hershey.&#10;Add my poems to avoid the snap,&#10;I call that mercy. ♦️🔸👲🏼❇️🔷🔮&#10;&#10;";
+const thanosMoreImpatient = "Time stones are green&#10;I'm still waiting for an answer to my plea&#10;You could not live with your own failure,&#10;and where did that bring you?&#10;Back to me.&#10;&#10;";
+const thanosEvenMoreImpatient = "Power stones are purple,&#10;Adding my poems takes few skills.&#10;I don't want to snap you,&#10;but the hardest choices require the strongest wills&#10;&#10;";
+const thanosVeryVeryVeryImpatient = "Roses are red,&#10;My skin is purple.&#10;You will be snapped for not uploading my poems.&#10;Nothing rhymes with purple.&#10;&#10;";
 let name = "";
 
 app.get("/", (req, res) => {
@@ -68,6 +74,30 @@ app.get("/significant-otherromantic", (req, res) => {
 
 app.get("/significant-otheranger", (req, res) => {
   res.render("poem", {poem: soAnger, name: name, lines: 8});
+});
+
+app.get("/thanosdid-nothing-wrong", (req, res) => {
+  res.render("poem", {poem: thanosDidNothingWrong, name: name, lines: 6});
+});
+
+app.get("/thanossad", (req, res) => {
+  res.render("poem", {poem: thanosSad, name: name, lines: 6});
+});
+
+app.get("/thanosimpatient", (req, res) => {
+  res.render("poem", {poem: thanosImpatient, name: name, lines: 6});
+});
+
+app.get("/thanosmore-impatient", (req, res) => {
+  res.render("poem", {poem: thanosMoreImpatient, name: name, lines: 9});
+});
+
+app.get("/thanoseven-more-impatient", (req, res) => {
+  res.render("poem", {poem: thanosEvenMoreImpatient, name: name, lines: 7});
+});
+
+app.get("/thanosvery-very-very-impatient", (req, res) => {
+  res.render("poem", {poem: thanosVeryVeryVeryImpatient, name: name, lines: 7});
 });
 
 app.post("/", (req, res) => {

@@ -63,7 +63,7 @@ function (_React$Component) {
         value: "mother"
       }, "Mother"), React.createElement("option", {
         value: "significant-other"
-      }, "SO"), React.createElement("option", {
+      }, "Significant Other"), React.createElement("option", {
         value: "thanos"
       }, "Thanos (User Submitted)"))), this.state.person === "mother" && React.createElement("div", {
         className: "select-style"
@@ -110,10 +110,14 @@ function (_React$Component) {
       }, "Did Nothing Wrong"), React.createElement("option", {
         value: "sad"
       }, "Sad"), React.createElement("option", {
-        value: "anger"
-      }, "Anger"), React.createElement("option", {
         value: "impatient"
-      }, "Impatient"))), React.createElement("input", {
+      }, "Impatient"), React.createElement("option", {
+        value: "more-impatient"
+      }, "More Impatient"), React.createElement("option", {
+        value: "even-more-impatient"
+      }, "Even More Impatient"), React.createElement("option", {
+        value: "very-very-very-impatient"
+      }, "Very Very Very Impatient"))), React.createElement("input", {
         type: "text",
         name: "name",
         placeholder: "Your Name",
