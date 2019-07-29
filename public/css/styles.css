@@ -33,12 +33,13 @@ hr {
 }
 
 #header {
-  background-color: rgba(133, 174, 225,.5);
+  background-image: linear-gradient(0deg, #e7f0fd 0%, #accbee 100%);
+  /* background-color: rgba(133, 174, 225,.5); */
 ;
 }
 
 #Form {
-
+  background-color: #e7f0fd;
 }
 
 nav a {
@@ -243,7 +244,7 @@ textarea.submit {
 }
 
 footer {
-  background-color: rgba(133, 174, 225,.5);
+  background-color: #accbee;
   text-align: center;
   padding: 1.5em 0;
 }
