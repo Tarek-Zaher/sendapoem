@@ -65,7 +65,11 @@ function (_React$Component) {
         value: "significant-other"
       }, "Significant Other"), React.createElement("option", {
         value: "thanos"
-      }, "Thanos (User Submitted)"))), this.state.person === "mother" && React.createElement("div", {
+      }, "Thanos (User Submitted)"), React.createElement("option", {
+        value: "pig"
+      }, "Pig"), React.createElement("option", {
+        value: "fish"
+      }, "Fish"))), this.state.person === "mother" && React.createElement("div", null, React.createElement("div", {
         className: "select-style"
       }, React.createElement("select", {
         name: "mood"
@@ -81,7 +85,16 @@ function (_React$Component) {
         value: "romantic"
       }, "Romantic"), React.createElement("option", {
         value: "anger"
-      }, "Anger"))), this.state.person === "significant-other" && React.createElement("div", {
+      }, "Anger"))), React.createElement("input", {
+        type: "text",
+        name: "name",
+        placeholder: "Your Name",
+        autocomplete: "off",
+        arialabel: "Your Name"
+      }), React.createElement("button", {
+        type: "submit",
+        name: "button"
+      }, "Generate!")), this.state.person === "significant-other" && React.createElement("div", null, React.createElement("div", {
         className: "select-style"
       }, React.createElement("select", {
         name: "mood"
@@ -97,7 +110,16 @@ function (_React$Component) {
         value: "romantic"
       }, "Romantic"), React.createElement("option", {
         value: "anger"
-      }, "Anger"))), this.state.person === "thanos" && React.createElement("div", {
+      }, "Anger"))), React.createElement("input", {
+        type: "text",
+        name: "name",
+        placeholder: "Your Name",
+        autocomplete: "off",
+        arialabel: "Your Name"
+      }), React.createElement("button", {
+        type: "submit",
+        name: "button"
+      }, "Generate!")), this.state.person === "thanos" && React.createElement("div", null, React.createElement("div", {
         className: "select-style"
       }, React.createElement("select", {
         name: "mood"
@@ -126,7 +148,45 @@ function (_React$Component) {
       }), React.createElement("button", {
         type: "submit",
         name: "button"
-      }, "Generate!")));
+      }, "Generate!")), this.state.person === "pig" && React.createElement("div", null, React.createElement("div", {
+        className: "select-style"
+      }, React.createElement("select", {
+        name: "mood"
+      }, React.createElement("option", {
+        value: "",
+        disabled: true,
+        selected: true
+      }, "Mood"), React.createElement("option", {
+        value: "apology"
+      }, "Apology"))), React.createElement("input", {
+        type: "text",
+        name: "name",
+        placeholder: "Your Name",
+        autocomplete: "off",
+        arialabel: "Your Name"
+      }), React.createElement("button", {
+        type: "submit",
+        name: "button"
+      }, "Generate!")), this.state.person === "fish" && React.createElement("div", null, React.createElement("div", {
+        className: "select-style"
+      }, React.createElement("select", {
+        name: "mood"
+      }, React.createElement("option", {
+        value: "",
+        disabled: true,
+        selected: true
+      }, "Mood"), React.createElement("option", {
+        value: "vindication"
+      }, "Vindication"))), React.createElement("input", {
+        type: "text",
+        name: "name",
+        placeholder: "Your Name",
+        autocomplete: "off",
+        arialabel: "Your Name"
+      }), React.createElement("button", {
+        type: "submit",
+        name: "button"
+      }, "Generate!"))));
     }
   }]);
 

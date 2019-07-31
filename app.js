@@ -29,6 +29,8 @@ const thanosImpatient = "Mind stones are yellow,&#10;My favorite chocolate is He
 const thanosMoreImpatient = "Time stones are green&#10;I'm still waiting for an answer to my plea&#10;You could not live with your own failure,&#10;and where did that bring you?&#10;Back to me.&#10;&#10;";
 const thanosEvenMoreImpatient = "Power stones are purple,&#10;Adding my poems takes few skills.&#10;I don't want to snap you,&#10;but the hardest choices require the strongest wills&#10;&#10;";
 const thanosVeryVeryVeryImpatient = "Roses are red,&#10;My skin is purple.&#10;You will be snapped for not uploading my poems.&#10;Nothing rhymes with purple.&#10;&#10;";
+const pigApology = "Little pig running through the grass&#10;Wagging your spiraled tail.&#10;I am sorry.&#10;I ate you fast.&#10;But from now on I will eat kale.&#10;&#10;";
+const fishVindication = "Innocent fish swimming through your water&#10;Breathing, miraculously, with gills.&#10;Please know, the fisherman treats his daughter&#10;With caring consideration for her pain.&#10;He just thinks what he learned from his father:&#10;That suffering never reaches your brain.&#10;&#10;";
 let name = "";
 
 app.get("/", (req, res) => {
@@ -98,6 +100,14 @@ app.get("/thanoseven-more-impatient", (req, res) => {
 
 app.get("/thanosvery-very-very-impatient", (req, res) => {
   res.render("poem", {poem: thanosVeryVeryVeryImpatient, name: name, lines: 7});
+});
+
+app.get("/pigapology", (req, res) => {
+  res.render("poem", {poem: pigApology, name: name, lines: 7});
+});
+
+app.get("/fishvindication", (req, res) => {
+  res.render("poem", {poem: fishVindication, name: name, lines: 13});
 });
 
 app.post("/", (req, res) => {
