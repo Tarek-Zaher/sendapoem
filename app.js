@@ -16,12 +16,12 @@ app.use(favicon(__dirname + "/public/images/favicon.ico"));
 
 const defaultPoem = "hello friend,&#10;thanks for coming to my site!&#10;you didn't fill out the form&#10;but that's alright&#10;&#10;I hope you'll go back&#10;and fill it out all the way&#10;and then send it to someone special&#10;and make someone special's day. (:&#10;&#10;";
 const motherGeneralThanks = "When I was a baby&#10;You made sure that I grew&#10;and now I think, maybe,&#10;I would like to thank you:&#10;&#10;Thanks! (:&#10;&#10;";
-const motherBirthday = "Happy Birthday Mom! What a life it's been.&#10;I love you times one million and ten.&#10;You show me every day how to be strong&#10;and that's why I'll never stop loving my mom. (:&#10;&#10;";
+const motherBirthday = "Happy Birthday Mom! I am your biggest fan&#10;I love you times one million and ten.&#10;If I could time travel, I'd travel back to when you were a baby&#10;and give you a high five in advance for being the coolest, most loving lady! (:&#10;&#10;";
 const motherRomantic = "Freud must be smiling so bright&#10;if, now, he looks upon me&#10;for his theories—they are right&#10;I'm in love with my mommy.&#10;&#10;";
-const motherAnger = "Dear Mother.&#10;You may have birthed me out of your body,&#10;but that's no excuse to be rude and snotty.&#10;If you haven't gotten the message, I'll be direct and pointed:&#10;I'm not angry at you; I'm just dissapointed.&#10;&#10;";
+const motherAnger = "Dear Mother.&#10;You may have birthed me out of your body,&#10;but that's no excuse to be rude and snotty.&#10;If you haven't gotten the message, I'll just say what you did:&#10;I'm not angry at you; I'm just dissapointed.&#10;&#10;";
 const soGeneralThanks = "Thank you for your hugs.&#10;Thank you for your kisses.&#10;Everything you are&#10;fulfills all of my wishes.&#10;&#10;";
-const soBirthday = "Roses are red.&#10;Violets are blue.&#10;You're the love of my life.&#10;Happy Birthday to you. (:&#10;&#10;";
-const soRomantic = "I must be a bear&#10;for you look oh so yummy&#10;ferocious when attacked,&#10;but inside sweet as honey. (:&#10;&#10;";
+const soBirthday = "Roses are red.&#10;Violets are blue.&#10;You're a year older.&#10;and oh yeah! I love you. (:&#10;&#10;";
+const soRomantic = "You are so sweet—anyone can see!&#10;In fact, I'm worried a bear might mistake you for honey!&#10;but if he did, I'd tell him how wonderful you are&#10;and he, understanding, would drive away in his car. &#10;&#10;";
 const soAnger = "You were a fool to betray me&#10;and now you will have to pay me&#10;five kisses a day, two snuggles at night&#10;and the next time we argue&#10;you'll admit that I'm right!&#10;&#10;";
 const thanosDidNothingWrong = "roses are red,&#10;the space stone is blue.&#10;thanos did nothing wrong.&#10;he did what's best for you&#10;&#10;";
 const thanosSad = "reality stones are red&#10;i feel bad, man.&#10;I tried to help the universe,&#10;and they called me a mad man&#10;&#10;";
@@ -51,7 +51,7 @@ app.get("/mothergeneral-thanks", (req, res) => {
 });
 
 app.get("/motherbirthday", (req, res) => {
-  res.render("poem", {poem: motherBirthday, name: name, lines: 9});
+  res.render("poem", {poem: motherBirthday, name: name, lines: 10});
 });
 
 app.get("/motherromantic", (req, res) => {
