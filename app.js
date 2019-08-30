@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use(favicon(__dirname + "/public/images/favicon.ico"));
 
+let name = "";
 const defaultPoem = "hello friend,&#10;thanks for coming to my site!&#10;you didn't fill out the form&#10;but that's alright&#10;&#10;I hope you'll go back&#10;and fill it out all the way&#10;and then send it to someone special&#10;and make someone special's day. (:&#10;&#10;";
 const motherGeneralThanks = "When I was a baby&#10;You made sure that I grew&#10;and now I think, maybe,&#10;I would like to thank you:&#10;&#10;Thanks! (:&#10;&#10;";
 const motherBirthday = "Happy Birthday Mom! I am your biggest fan&#10;I love you times one million and ten.&#10;If I could time travel, I'd travel back to when you were a baby&#10;and give you a high five in advance for being the coolest, most loving lady! (:&#10;&#10;";
@@ -29,6 +30,8 @@ const thanosImpatient = "Mind stones are yellow,&#10;My favorite chocolate is He
 const thanosMoreImpatient = "Time stones are green&#10;I'm still waiting for an answer to my plea&#10;You could not live with your own failure,&#10;and where did that bring you?&#10;Back to me.&#10;&#10;";
 const thanosEvenMoreImpatient = "Power stones are purple,&#10;Adding my poems takes few skills.&#10;I don't want to snap you,&#10;but the hardest choices require the strongest wills&#10;&#10;";
 const thanosVeryVeryVeryImpatient = "Roses are red,&#10;My skin is purple.&#10;You will be snapped for not uploading my poems.&#10;Nothing rhymes with purple.&#10;&#10;";
+const friendGoodJob = "This is just to say&#10;I have seen&#10;the successes&#10;you succeeded&#10;in securing&#10;&#10;and I couldn't be prouder to say that you're my friend. (:&#10;&#10;";
+const friendSupportive = "I know that sometimes life&#10;can feel like a heavy&#10;log in the middle of the road&#10;&#10;But know that you'll survive&#10;your friend is ready&#10;I'm always here to help you lift the load. (:&#10;&#10;";
 
 app.get("/", (req, res) => {
   res.render("home");
@@ -98,6 +101,15 @@ app.get("/thanoseven-more-impatient", (req, res) => {
 app.get("/thanosvery-very-very-impatient", (req, res) => {
   res.render("poem", {poem: thanosVeryVeryVeryImpatient, name: name, lines: 7});
 });
+
+app.get("/friendthats-a-good-job", (req, res) => {
+  res.render("poem", {poem: friendGoodJob, name: name, lines: 10});
+});
+
+app.get("/friendsupportive", (req, res) => {
+  res.render("poem", {poem: friendSupportive, name: name, lines: 10});
+});
+
 
 app.post("/", (req, res) => {
   const person = req.body.person;

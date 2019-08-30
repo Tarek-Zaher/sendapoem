@@ -65,7 +65,9 @@ function (_React$Component) {
         value: "significant-other"
       }, "Significant Other"), React.createElement("option", {
         value: "thanos"
-      }, "Thanos (User Submitted)"))), this.state.person === "mother" && React.createElement("div", null, React.createElement("div", {
+      }, "Thanos (User Submitted)"), React.createElement("option", {
+        value: "friend"
+      }, "Friend"))), this.state.person === "mother" && React.createElement("div", null, React.createElement("div", {
         className: "select-style"
       }, React.createElement("select", {
         name: "mood"
@@ -136,6 +138,27 @@ function (_React$Component) {
       }, "Even More Impatient"), React.createElement("option", {
         value: "very-very-very-impatient"
       }, "Very Very Very Impatient"))), React.createElement("input", {
+        type: "text",
+        name: "name",
+        placeholder: "Your Name",
+        autocomplete: "off",
+        arialabel: "Your Name"
+      }), React.createElement("button", {
+        type: "submit",
+        name: "button"
+      }, "Generate!")), this.state.person === "friend" && React.createElement("div", null, React.createElement("div", {
+        className: "select-style"
+      }, React.createElement("select", {
+        name: "mood"
+      }, React.createElement("option", {
+        value: "",
+        disabled: true,
+        selected: true
+      }, "Mood"), React.createElement("option", {
+        value: "thats-a-good-job"
+      }, "That's a Good Job!"), React.createElement("option", {
+        value: "supportive"
+      }, "Supportive"))), React.createElement("input", {
         type: "text",
         name: "name",
         placeholder: "Your Name",
